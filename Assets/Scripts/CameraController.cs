@@ -37,7 +37,7 @@ public class CameraController : MonoBehaviour
         xInput = Input.GetAxis("Horizontal");
         zInput = Input.GetAxis("Vertical");
 
-        Vector3 dir = (transform.forward * -zInput) + (transform.right * -xInput);
+        Vector3 dir = (transform.forward * zInput) + (transform.right * xInput);
 
         transform.position += dir * moveSpeed * Time.deltaTime;
     }
