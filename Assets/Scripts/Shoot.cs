@@ -22,6 +22,7 @@ public class Shoot : MonoBehaviour
         {
             Debug.Log($"Hit{hit.collider.gameObject.tag}");
             Debug.DrawRay(shootPoint.transform.position, Vector3.forward * 1000f, Color.magenta);
+            //Destroy(gameObject);
         }
         else
         {
