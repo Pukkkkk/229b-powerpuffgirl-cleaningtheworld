@@ -67,6 +67,7 @@ GameObject:
   - component: {fileID: 23261711451581766}
   - component: {fileID: 3151679604393512672}
   - component: {fileID: 2702340491056290638}
+  - component: {fileID: 3810772699226785904}
   m_Layer: 6
   m_Name: Asteroid Lava Red 1
   m_TagString: Planet
@@ -191,3 +192,19 @@ CapsuleCollider:
   m_Height: 5.9747777
   m_Direction: 1
   m_Center: {x: 0.00000017881393, y: 0.0000035762787, z: -0.000003516674}
+--- !u!114 &3810772699226785904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1822345149752838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb12fcea640da347984342becc3e416, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObsHP: 10
+  curObsHP: 0
+  explosion: {fileID: 2603812671599470959, guid: a96e4ec83831f074899f7250ce322844,
+    type: 3}

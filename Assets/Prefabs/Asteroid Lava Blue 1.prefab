@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 23523893699283024}
   - component: {fileID: 2697927424590651752}
   - component: {fileID: 4548576617860294643}
+  - component: {fileID: -8606758395641827378}
   m_Layer: 6
   m_Name: Asteroid Lava Blue 1
   m_TagString: Planet
@@ -137,6 +138,22 @@ CapsuleCollider:
   m_Height: 3.9963422
   m_Direction: 1
   m_Center: {x: 0.00000023841858, y: -0.00000023841858, z: -0.0000021457672}
+--- !u!114 &-8606758395641827378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1056666096333670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb12fcea640da347984342becc3e416, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObsHP: 10
+  curObsHP: 0
+  explosion: {fileID: 2603812671599470959, guid: a96e4ec83831f074899f7250ce322844,
+    type: 3}
 --- !u!1 &1619919757320400
 GameObject:
   m_ObjectHideFlags: 0

@@ -11,6 +11,8 @@ public class RocketLaser : MonoBehaviour
 
     [SerializeField] private ParticleSystem muzzleParticles;
     [SerializeField] private ParticleSystem hitParticles;
+
+    [SerializeField] private float damage;
     
     private void Awake()
     {
@@ -35,6 +37,11 @@ public class RocketLaser : MonoBehaviour
         beam.SetPosition(1, hitPosition);
 
         hitParticles.transform.position = hitPosition;
+
+        if (cast && hit.collider.TryGetComponent(out Damage damageable))
+        {
+            damageable.ApplyDamage(damage * Time.fixedDeltaTime);
+        }
     }
 
     private void Activate()
