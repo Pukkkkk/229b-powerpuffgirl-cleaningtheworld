@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class RocketLaser : MonoBehaviour
 {
@@ -13,18 +14,28 @@ public class RocketLaser : MonoBehaviour
     [SerializeField] private ParticleSystem hitParticles;
 
     [SerializeField] private float damage;
-    //[SerializeField] private float rocketHP, curRocketHP;
+    [SerializeField] private float rocketHP;
+    [SerializeField] private float curRocketHP;
+
+    [SerializeField] private Image healthBar;
     
     private void Awake()
     {
+        rocketHP = curRocketHP;
         beam.enabled = false;
-        //rocketHP = curRocketHP;
     }
-    
+
+    private void Start()
+    {
+        rocketHP = 100;
+    }
+
     void Update()
     {
         if (Input.GetMouseButtonDown(0)) Activate();
         else if (Input.GetMouseButtonUp(0)) Deactivate();
+
+        healthBar.fillAmount = Mathf.Clamp( curRocketHP / rocketHP, 0, 1);
     }
 
     private void FixedUpdate()

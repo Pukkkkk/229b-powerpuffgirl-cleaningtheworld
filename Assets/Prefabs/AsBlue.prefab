@@ -155,6 +155,7 @@ MonoBehaviour:
   explosion: {fileID: 2603812671599470959, guid: a96e4ec83831f074899f7250ce322844,
     type: 3}
   obsDamage: 20
+  health: {fileID: 0}
 --- !u!1 &1619919757320400
 GameObject:
   m_ObjectHideFlags: 0
