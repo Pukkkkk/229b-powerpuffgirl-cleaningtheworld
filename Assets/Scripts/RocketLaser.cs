@@ -13,10 +13,12 @@ public class RocketLaser : MonoBehaviour
     [SerializeField] private ParticleSystem hitParticles;
 
     [SerializeField] private float damage;
+    //[SerializeField] private float rocketHP, curRocketHP;
     
     private void Awake()
     {
         beam.enabled = false;
+        //rocketHP = curRocketHP;
     }
     
     void Update()
@@ -60,5 +62,11 @@ public class RocketLaser : MonoBehaviour
         
         muzzleParticles.Stop();
         hitParticles.Stop();
+    }
+
+    private void OnCollisionEnter(Collision other)
+    {
+        Destroy(gameObject);
+        Debug.Log("Game Over!");
     }
 }

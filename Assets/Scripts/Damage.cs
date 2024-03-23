@@ -8,6 +8,7 @@ public class Damage : MonoBehaviour
     [SerializeField] private float ObsHP;
     [SerializeField] private float curObsHP;
     [SerializeField] private ParticleSystem explosion;
+    //[SerializeField] private float obsDamage;
 
     private void Awake()
     {
@@ -27,5 +28,6 @@ public class Damage : MonoBehaviour
     {
         Instantiate(explosion, transform.position, Quaternion.identity);
         Destroy(gameObject);
+        ScoreManager.scoreCount += 100;
     }
 }

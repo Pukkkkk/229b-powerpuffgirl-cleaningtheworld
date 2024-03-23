@@ -23,7 +23,7 @@ public class CameraController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        moveSpeed = 50;
+        moveSpeed = 100;
     }
 
     // Update is called once per frame
