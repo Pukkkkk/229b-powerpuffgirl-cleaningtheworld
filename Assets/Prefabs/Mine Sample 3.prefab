@@ -44,7 +44,6 @@ GameObject:
   - component: {fileID: 33336533123226746}
   - component: {fileID: 23158056617320270}
   - component: {fileID: -1563262100645987446}
-  - component: {fileID: 4619822000542272527}
   - component: {fileID: -2061784681910636954}
   m_Layer: 6
   m_Name: Mine Sample 3
@@ -146,19 +145,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &4619822000542272527
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1040074329139878}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42617c965c819f847b2081cf05ed296e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 0}
 --- !u!136 &-2061784681910636954
 CapsuleCollider:
   m_ObjectHideFlags: 0

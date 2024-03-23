@@ -6,11 +6,12 @@ using UnityEngine;
 public class RocketLaser : MonoBehaviour
 {
     [SerializeField] private LineRenderer beam;
-
     [SerializeField] private Transform muzzlePoint;
-
     [SerializeField] private float maxLenght;
 
+    [SerializeField] private ParticleSystem muzzleParticles;
+    [SerializeField] private ParticleSystem hitParticles;
+    
     private void Awake()
     {
         beam.enabled = false;
@@ -32,11 +33,16 @@ public class RocketLaser : MonoBehaviour
         
         beam.SetPosition(0, muzzlePoint.position);
         beam.SetPosition(1, hitPosition);
+
+        hitParticles.transform.position = hitPosition;
     }
 
     private void Activate()
     {
         beam.enabled = true;
+        
+        muzzleParticles.Play();
+        hitParticles.Play();
     }
 
     private void Deactivate()
@@ -44,5 +50,8 @@ public class RocketLaser : MonoBehaviour
         beam.enabled = false;
         beam.SetPosition(0, muzzlePoint.position);
         beam.SetPosition(1, muzzlePoint.position);
+        
+        muzzleParticles.Stop();
+        hitParticles.Stop();
     }
 }
