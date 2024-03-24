@@ -28,4 +28,14 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
+
+    public void Credit()
+    {
+        SceneManager.LoadScene("CreditScene");
+    }
+
+    public void Back()
+    {
+        SceneManager.LoadScene("GameScene");
+    }
 }
