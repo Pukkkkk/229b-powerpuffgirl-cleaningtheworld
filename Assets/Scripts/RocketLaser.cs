@@ -83,7 +83,6 @@ public class RocketLaser : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
-        //rocketHP -=
         gameManager.GameOver();
         Debug.Log("Game Over!");
     }
