@@ -208,4 +208,4 @@ MonoBehaviour:
   explosion: {fileID: 2603812671599470959, guid: a96e4ec83831f074899f7250ce322844,
     type: 3}
   obsDamage: 20
-  health: {fileID: 0}
+  health: {fileID: 1040074329139878, guid: 705582b4803dd134c9b64bea40c4110f, type: 3}

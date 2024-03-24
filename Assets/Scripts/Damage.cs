@@ -10,8 +10,6 @@ public class Damage : MonoBehaviour
     [SerializeField] private ParticleSystem explosion;
     [SerializeField] private float obsDamage;
 
-    [SerializeField] private RocketLaser health;
-
     private void Awake()
     {
         curObsHP = ObsHP;
@@ -33,11 +31,4 @@ public class Damage : MonoBehaviour
         ScoreManager.scoreCount += 100;
     }
 
-    private void OnCollisionEnter(Collision other)
-    {
-        if (other.gameObject.CompareTag("Player"))
-        {
-            //other.gameObject.GetComponent<RocketLaser>().
-        }
-    }
 }

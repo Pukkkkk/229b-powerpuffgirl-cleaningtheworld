@@ -18,11 +18,17 @@ public class RocketLaser : MonoBehaviour
     [SerializeField] private float curRocketHP;
 
     [SerializeField] private Image healthBar;
+
+    [SerializeField] private GameObject obsDamage;
+
+    public GameManager gameManager;
     
     private void Awake()
     {
         rocketHP = curRocketHP;
         beam.enabled = false;
+        
+        //obsDamage = GetComponent<Damage>().
     }
 
     private void Start()
@@ -77,7 +83,8 @@ public class RocketLaser : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
-        Destroy(gameObject);
+        //rocketHP -=
+        gameManager.GameOver();
         Debug.Log("Game Over!");
     }
 }
